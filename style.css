@@ -680,13 +680,14 @@ font-size: 15px;
 
 @media screen and (max-width: 600px) {
     .bouton{
-        font-size:  17px;
+                font-size: 17px;
         border-radius: 16px;
         margin-left: 0px;
         position: relative;
         text-align: center;
         display: flex;
-        justify-self: left
+        justify-content: center;
+        width: 129px;
     }
     main{
         margin: 0px 40px;
