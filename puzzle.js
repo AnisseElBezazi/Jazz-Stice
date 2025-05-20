@@ -1,89 +1,68 @@
-var rows =5;
-var columns =5;
-
-var currTile;
-var otherTile;
-
+var rows = 5;
+var columns = 5;
 var turns = 0;
+let selectedTile = null;
 
-window.onload = function(){
-    for (let r=0 ; r < rows ;r++){
-        for(let c =0; c < columns; c++ ){
-            let tile = document.createElement("img")
-            tile.src ="./Puzzle/blank.png";
-
-            tile.addEventListener("dragstart", dragStart);
-            tile.addEventListener("dragover", dragOver);
-            tile.addEventListener("dragenter", dragEnter);
-            tile.addEventListener("dragleave", dragLeave);
-            tile.addEventListener("drop", dragDrop);
-            tile.addEventListener("dragend", dragEnd);
-
-            document.getElementById("board").append(tile);
-        }
-    }
-
-
+window.onload = function () {
+    // Créer une liste des morceaux mélangés
     let pieces = [];
-    for (let i=1; i<= rows*columns; i++){
+    for (let i = 1; i <= rows * columns - 1; i++) {
         pieces.push(i.toString());
     }
-    pieces.reverse();
-    for (let i=0; i < pieces.length; i++){
-        let j = Math.floor(Math.random()*pieces.length);
-         
-        let tmp =pieces[i];
+    pieces.push("blank"); // Dernière pièce vide
 
-        pieces[i] =pieces[j];
-        pieces[j] = tmp ;
+    // Mélange
+    for (let i = pieces.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [pieces[i], pieces[j]] = [pieces[j], pieces[i]];
     }
 
-    for (let i=0; i < pieces.length; i++){
-       let tile = document.createElement("img")
-       tile.src = "./Puzzle/" + pieces[i] + ".png";
+    // Création du plateau
+    for (let i = 0; i < pieces.length; i++) {
+        let tile = document.createElement("img");
+        let value = pieces[i];
 
-        tile.addEventListener("dragstart", dragStart);
-        tile.addEventListener("dragover", dragOver);
-        tile.addEventListener("dragenter", dragEnter);
-        tile.addEventListener("dragleave", dragLeave);
-        tile.addEventListener("drop", dragDrop);
-        tile.addEventListener("dragend", dragEnd);
+        tile.src = value === "blank" ? "./Puzzle/blank.png" : `./Puzzle/${value}.png`;
+        tile.dataset.value = value;
+        tile.style.width = "100px";
+        tile.style.height = "100px";
+        tile.style.border = "1px solid #ccc";
+        tile.style.boxSizing = "border-box";
 
-       document.getElementById("pieces").append(tile);
+        tile.addEventListener("click", handleTileClick);
+
+        document.getElementById("board").append(tile);
     }
-}
+};
 
-function dragStart(){
-    currTile = this;
-}
-
-function dragOver(e){
-    e.preventDefault();
-}
-
-function dragEnter(e){
-    e.preventDefault();
-}
-
-function dragLeave(){
-    
-}
-
-function dragDrop(){
-    otherTile = this;
-}
-
-function dragEnd(){
-    if (currTile.src.includes("blank")){
+function handleTileClick() {
+    if (!selectedTile) {
+        selectedTile = this;
+        this.style.border = "2px solid red";
         return;
     }
-   let currImg = currTile.src;
-   let otherImg = otherTile.src;
-   currTile.src = otherImg; 
-   otherTile.src =currImg;
-   turns += 1;
-   document.getElementById("turns").innerText = turns;
+
+    if (this === selectedTile) {
+        this.style.border = "1px solid #ccc";
+        selectedTile = null;
+        return;
+    }
+
+    if (selectedTile.dataset.value === "blank" || this.dataset.value === "blank") {
+        // Échange les src et les valeurs
+        let tempSrc = this.src;
+        let tempVal = this.dataset.value;
+
+        this.src = selectedTile.src;
+        this.dataset.value = selectedTile.dataset.value;
+
+        selectedTile.src = tempSrc;
+        selectedTile.dataset.value = tempVal;
+
+        turns++;
+        document.getElementById("turns").innerText = turns;
+    }
+
+    selectedTile.style.border = "1px solid #ccc";
+    selectedTile = null;
 }
-
-
-

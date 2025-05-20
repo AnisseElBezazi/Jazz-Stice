@@ -383,9 +383,9 @@ a{
     cursor: pointer;
 }
 
-#board{
-width: 400px;
-height: 400px;
+#board {
+width: 500px;
+height: 503px;
 border: 2px solid #F7A600;
 margin: 0 auto;
 display: flex;
@@ -398,14 +398,7 @@ height: 78px;
 border: 0.5px solid blue;
 }
 
-#pieces {
-    width: 1040px;
-    height: 160px;
-    border: 2px solid #F7A600;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-}
+
 
 #pieces img{
 width: 78px;
@@ -644,7 +637,7 @@ border: 0.5px solid rgb(155, 155, 255);
             font-size: 15px;
             color: #003C9E 
         }
-
+        
 }
 
 
@@ -759,27 +752,29 @@ border: 0.5px solid rgb(155, 155, 255);
         .rotate-right{
             bottom: 7px;
         }
+        .gauche{
+            display: none;
+        }
+
+        .puzzle{
+           zoom: 0.7; 
+        }
+      
+        
 }
+
+
+
+
 
 @media screen and (max-width: 400px){
 
- h2{
-            font-size: 15px;
-         color: #F7A600;
-        }
-        
-        p{
-            font-size: 10px;
-            color: #003C9E 
+.puzzle{
+           zoom: 0.5; 
         }
 
 
 }
-
-
-
-
-
 
 
 
