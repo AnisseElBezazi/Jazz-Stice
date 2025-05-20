@@ -684,6 +684,8 @@ font-size: 15px;
         color: #003C9E;
         border-radius: 21px;
         margin-left: 0px;
+        position: relative;
+        justify-self: flex-start;
           
     }
     main{
@@ -765,7 +767,7 @@ font-size: 15px;
         .left-header img{
             width: 40px;
         }
- a  
+
         .video {
             height: 180px;
         }
