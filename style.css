@@ -680,13 +680,13 @@ font-size: 15px;
 
 @media screen and (max-width: 600px) {
     .bouton{
-        font-size:  21px;
-        color: #003C9E;
-        border-radius: 21px;
+        font-size:  17px;
+        border-radius: 16px;
         margin-left: 0px;
         position: relative;
-        justify-self: flex-start;
-          
+        text-align: center;
+        display: flex;
+        justify-self: left
     }
     main{
         margin: 0px 40px;
@@ -801,20 +801,14 @@ font-size: 15px;
            zoom: 0.7; 
         }
 
-        .bouton{
-        font-size:  17px;
-        color: #003C9E;
-        border-radius: 16px;
-        margin-left: 0px;
-          
-    }
-      .gauche2{
-        display: flex;
-      }
+        .gauche2{
+            display: flex;
+        }
 
-      .marg {
-    margin-top: 20px;
-}
+        .marg {
+            margin-top: 20px;
+        }
+
 .note p{
     font-size: 10px;
 }
@@ -827,8 +821,6 @@ font-size: 15px;
 .fresque img {
     margin-top: 20px;
 border-radius: 16px;}
-
-
 
 }
 
