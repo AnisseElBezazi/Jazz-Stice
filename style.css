@@ -149,6 +149,7 @@ main{
     justify-content : center;
     margin: 10px 80px;
     box-shadow: 0px 0px 18px 0px black;
+    text-align: center;
 }
 .content{
     display: flex;
@@ -443,6 +444,7 @@ border: 0.5px solid rgb(155, 155, 255);
         bottom: -50px;
         right: -50px;
     }
+    
 }
 
 
@@ -526,7 +528,7 @@ border: 0.5px solid rgb(155, 155, 255);
         }
         
         p{
-            font-size: 15px;
+            font-size: 25px;
             color: #003C9E 
         }
 
@@ -654,10 +656,25 @@ border: 0.5px solid rgb(155, 155, 255);
         }
         
         p{
-            font-size: 15px;
+            font-size: 25px;
             color: #003C9E 
         }
         
+}
+
+@media screen and (max-width: 800px) {
+
+p{
+font-size: 15px;
+}
+.bouton2{
+           zoom: 0.5; 
+        }
+
+        .card-content{
+            zoom: 0.6;
+        }
+
 }
 
 
@@ -705,6 +722,7 @@ border: 0.5px solid rgb(155, 155, 255);
         .AD3D{
             flex-direction: column;
             justify-content: center;
+                margin-top: 10px;
         }
 
         header{
@@ -747,12 +765,13 @@ border: 0.5px solid rgb(155, 155, 255);
         .left-header img{
             width: 40px;
         }
-
+ a  
         .video {
             height: 180px;
         }
         .note{
             bottom: 729px;
+            border-radius: 12px;
         }
         .droite{
             margin-left: 0px;
@@ -764,7 +783,7 @@ border: 0.5px solid rgb(155, 155, 255);
             zoom: 0.4;
         }
         .bouton2{
-            zoom: 0.5;
+            zoom: 0.4;
         }
         .rotate-left{
             top: 7px;
@@ -790,7 +809,25 @@ border: 0.5px solid rgb(155, 155, 255);
       .gauche2{
         display: flex;
       }
-        
+
+      .marg {
+    margin-top: 20px;
+}
+.note p{
+    font-size: 10px;
+}
+     
+.fresque-content2{
+    margin-top: 20px;
+}
+
+
+.fresque img {
+    margin-top: 20px;
+border-radius: 16px;}
+
+
+
 }
 
 
