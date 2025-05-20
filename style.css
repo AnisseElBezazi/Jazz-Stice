@@ -256,9 +256,14 @@ border-radius: 20px;
     border-radius: 24px;
     border: solid 4px;
     justify-content: center;
-    width: 40%;
     align-items: center;
     margin-top: 10px;
+}
+
+.right-header :hover{
+    transform: translateY(-5px);
+    transition: 1s;
+    color: rgb(255, 161, 19);
 }
 .fresque-content2{
     margin-top: 100px;
@@ -406,6 +411,9 @@ height: 78px;
 border: 0.5px solid rgb(155, 155, 255);
 }
 
+
+
+
 @keyframes reveal{
     from{
         transform: translateY(200px);
@@ -417,6 +425,17 @@ border: 0.5px solid rgb(155, 155, 255);
         opacity: 1;
     }
 }
+
+
+@media screen and (max-width: 20000px) {
+
+.gauche2{
+        display: none;
+        flex-direction: column;
+      }
+}
+
+
 
 @media screen and (max-width: 600px) {
     .petite-image {
@@ -511,8 +530,9 @@ border: 0.5px solid rgb(155, 155, 255);
             color: #003C9E 
         }
 
-        h1{
-            font-size: 50px;
+        .titre h1{
+            font-size: 30px;
+            margin-bottom: 50px;
         }
 
 }
@@ -759,7 +779,17 @@ border: 0.5px solid rgb(155, 155, 255);
         .puzzle{
            zoom: 0.7; 
         }
-      
+
+        .bouton{
+        font-size:  17px;
+        color: #003C9E;
+        border-radius: 16px;
+        margin-left: 0px;
+          
+    }
+      .gauche2{
+        display: flex;
+      }
         
 }
 
@@ -791,3 +821,4 @@ border: 0.5px solid rgb(155, 155, 255);
    }
     
 }
+
