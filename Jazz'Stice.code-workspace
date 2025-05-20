@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Downloads/Montserrat"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Jazz'Stice"
+	}
+}
