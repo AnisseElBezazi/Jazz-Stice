@@ -675,6 +675,10 @@ font-size: 15px;
             zoom: 0.6;
         }
 
+        .ODD img {
+    width: 46%;
+}
+
 }
 
 
@@ -854,3 +858,7 @@ border-radius: 16px;}
     
 }
 
+.noir{
+background-color: black;
+color: white;
+}
