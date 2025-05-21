@@ -412,6 +412,16 @@ height: 78px;
 border: 0.5px solid rgb(155, 155, 255);
 }
 
+video{
+border-radius: 24px;
+width : 50%;
+}
+
+.poster img{
+    zoom: 0.8;
+}
+
+
 
 
 
@@ -827,6 +837,12 @@ font-size: 15px;
     margin-top: 20px;
 border-radius: 16px;}
 
+video{
+border-radius: 24px;
+width : 100%;
+}
+
+
 }
 
 
@@ -862,3 +878,5 @@ border-radius: 16px;}
 background-color: black;
 color: white;
 }
+
+
