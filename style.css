@@ -76,7 +76,8 @@ header{
 }
 
 .left-header img{
-    width: 80px;
+    width: 100px;
+    margin-left: 10px;
 }
 
 .right-header img{
@@ -419,9 +420,13 @@ width : 50%;
 }
 
 .poster img{
-    zoom: 0.8;
+    zoom: 20%;
 }
 
+.poster {
+    display: flex;
+margin-top: 40px;
+}
 
 
 
@@ -690,6 +695,15 @@ font-size: 15px;
     width: 46%;
 }
 
+.poster img{
+    zoom: 100%;
+}
+
+.poster {
+    display: flex;
+    flex-direction: column;
+margin-top: 40px;
+}
 }
 
 
